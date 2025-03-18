@@ -6,6 +6,18 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F4EAC9782D89F8F80094CB7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4EAC9712D89F8F80094CB7C /* Preview Assets.xcassets */; };
+		F4EAC9792D89F8F80094CB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4EAC9742D89F8F80094CB7C /* Assets.xcassets */; };
+		F4EAC97A2D89F8F80094CB7C /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAC96F2D89F8F80094CB7C /* Receipt.swift */; };
+		F4EAC97B2D89F8F80094CB7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAC9752D89F8F80094CB7C /* ContentView.swift */; };
+		F4EAC97C2D89F8F80094CB7C /* ReceiptSnapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAC9762D89F8F80094CB7C /* ReceiptSnapApp.swift */; };
+		F4EAC97E2D89F9280094CB7C /* ReceiptRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAC97D2D89F9280094CB7C /* ReceiptRealmObject.swift */; };
+		F4EAC9802D89F93E0094CB7C /* ReceiptRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EAC97F2D89F93E0094CB7C /* ReceiptRepository.swift */; };
+		F4EAC9832D89F9C30094CB7C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = F4EAC9822D89F9C30094CB7C /* Realm */; };
+		F4EAC9852D89F9C30094CB7C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F4EAC9842D89F9C30094CB7C /* RealmSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F4EAC94F2D89F8CB0094CB7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +39,16 @@
 		F4EAC93E2D89F8C90094CB7C /* ReceiptSnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptSnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EAC94E2D89F8CB0094CB7C /* ReceiptSnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptSnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EAC9582D89F8CB0094CB7C /* ReceiptSnapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptSnapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4EAC96F2D89F8F80094CB7C /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
+		F4EAC9712D89F8F80094CB7C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F4EAC9742D89F8F80094CB7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4EAC9752D89F8F80094CB7C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F4EAC9762D89F8F80094CB7C /* ReceiptSnapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptSnapApp.swift; sourceTree = "<group>"; };
+		F4EAC97D2D89F9280094CB7C /* ReceiptRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptRealmObject.swift; sourceTree = "<group>"; };
+		F4EAC97F2D89F93E0094CB7C /* ReceiptRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F4EAC9402D89F8C90094CB7C /* ReceiptSnap */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ReceiptSnap;
-			sourceTree = "<group>";
-		};
 		F4EAC9512D89F8CB0094CB7C /* ReceiptSnapTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ReceiptSnapTests;
@@ -52,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EAC9852D89F9C30094CB7C /* RealmSwift in Frameworks */,
+				F4EAC9832D89F9C30094CB7C /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +91,7 @@
 		F4EAC9352D89F8C90094CB7C = {
 			isa = PBXGroup;
 			children = (
-				F4EAC9402D89F8C90094CB7C /* ReceiptSnap */,
+				F4EAC9772D89F8F80094CB7C /* ReceiptSnap */,
 				F4EAC9512D89F8CB0094CB7C /* ReceiptSnapTests */,
 				F4EAC95B2D89F8CB0094CB7C /* ReceiptSnapUITests */,
 				F4EAC93F2D89F8C90094CB7C /* Products */,
@@ -90,6 +106,44 @@
 				F4EAC9582D89F8CB0094CB7C /* ReceiptSnapUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F4EAC9702D89F8F80094CB7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAC96F2D89F8F80094CB7C /* Receipt.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4EAC9722D89F8F80094CB7C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAC9712D89F8F80094CB7C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4EAC9732D89F8F80094CB7C /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAC97D2D89F9280094CB7C /* ReceiptRealmObject.swift */,
+				F4EAC97F2D89F93E0094CB7C /* ReceiptRepository.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		F4EAC9772D89F8F80094CB7C /* ReceiptSnap */ = {
+			isa = PBXGroup;
+			children = (
+				F4EAC9762D89F8F80094CB7C /* ReceiptSnapApp.swift */,
+				F4EAC9702D89F8F80094CB7C /* Models */,
+				F4EAC9732D89F8F80094CB7C /* Realm */,
+				F4EAC9752D89F8F80094CB7C /* ContentView.swift */,
+				F4EAC9742D89F8F80094CB7C /* Assets.xcassets */,
+				F4EAC9722D89F8F80094CB7C /* Preview Content */,
+			);
+			path = ReceiptSnap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,11 +161,10 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				F4EAC9402D89F8C90094CB7C /* ReceiptSnap */,
-			);
 			name = ReceiptSnap;
 			packageProductDependencies = (
+				F4EAC9822D89F9C30094CB7C /* Realm */,
+				F4EAC9842D89F9C30094CB7C /* RealmSwift */,
 			);
 			productName = ReceiptSnap;
 			productReference = F4EAC93E2D89F8C90094CB7C /* ReceiptSnap.app */;
@@ -195,6 +248,9 @@
 			);
 			mainGroup = F4EAC9352D89F8C90094CB7C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F4EAC9812D89F9C30094CB7C /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F4EAC93F2D89F8C90094CB7C /* Products */;
 			projectDirPath = "";
@@ -212,6 +268,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EAC9782D89F8F80094CB7C /* Preview Assets.xcassets in Resources */,
+				F4EAC9792D89F8F80094CB7C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4EAC97A2D89F8F80094CB7C /* Receipt.swift in Sources */,
+				F4EAC97B2D89F8F80094CB7C /* ContentView.swift in Sources */,
+				F4EAC9802D89F93E0094CB7C /* ReceiptRepository.swift in Sources */,
+				F4EAC97C2D89F8F80094CB7C /* ReceiptSnapApp.swift in Sources */,
+				F4EAC97E2D89F9280094CB7C /* ReceiptRealmObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +621,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F4EAC9812D89F9C30094CB7C /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F4EAC9822D89F9C30094CB7C /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4EAC9812D89F9C30094CB7C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		F4EAC9842D89F9C30094CB7C /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4EAC9812D89F9C30094CB7C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F4EAC9362D89F8C90094CB7C /* Project object */;
 }
