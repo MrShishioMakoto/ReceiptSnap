@@ -13,7 +13,11 @@ class ReceiptCaptureViewModel: ObservableObject {
     @Published var totalAmount: String = ""
     @Published var currency: String = ""
     
-    private let repository = ReceiptRepository()
+    private let repository: ReceiptRepositoryProtocol
+    
+    init(repository: ReceiptRepositoryProtocol) {
+        self.repository = repository
+    }
     
     func saveReceipt() async {
         guard let image = receiptImage,

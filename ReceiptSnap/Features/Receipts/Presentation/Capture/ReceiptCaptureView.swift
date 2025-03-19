@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ReceiptCaptureView: View {
-    @StateObject private var viewModel = ReceiptCaptureViewModel()
+    @StateObject private var viewModel: ReceiptCaptureViewModel
     @State private var showImagePicker = false
     @State private var inputImage: UIImage?
+    
+    init(repository: ReceiptRepositoryProtocol) {
+        _viewModel = StateObject(wrappedValue: ReceiptCaptureViewModel(repository: repository))
+    }
     
     var body: some View {
         NavigationView {
@@ -51,5 +55,5 @@ struct ReceiptCaptureView: View {
 }
 
 #Preview {
-    ReceiptCaptureView()
+    ReceiptCaptureView(repository: ReceiptRepository())
 }

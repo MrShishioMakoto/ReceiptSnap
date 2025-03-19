@@ -8,7 +8,11 @@
 import Foundation
 import RealmSwift
 
-class ReceiptRepository {
+protocol ReceiptRepositoryProtocol {
+    func saveReceipt(_ receipt: Receipt) async throws
+}
+
+class ReceiptRepository: ReceiptRepositoryProtocol {
     func saveReceipt(_ receipt: Receipt) async throws {
         try await withCheckedThrowingContinuation { continuation in
             DispatchQueue.global(qos: .background).async {
