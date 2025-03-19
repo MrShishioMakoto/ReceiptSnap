@@ -24,7 +24,7 @@ struct ReceiptCaptureView: View {
                     .frame(width: 150, height: 300)
                     .border(Color.black, width: 2)
                     .overlay(
-                        Text("Tap to capture a photo of your receipt.")
+                        Text(LocalizableKeys.Capture.tapToCapture)
                             .font(.title)
                             .fontWeight(.bold)
                     )
@@ -34,13 +34,24 @@ struct ReceiptCaptureView: View {
                     .padding()
                 
                 Form {
-                    DatePicker("Date", selection: $viewModel.date, displayedComponents: .date)
-                    TextField("Total Amount", text: $viewModel.totalAmount)
+                    DatePicker(LocalizableKeys.Capture.date, selection: $viewModel.date, displayedComponents: .date)
+                    TextField(LocalizableKeys.Capture.totalAmount, text: $viewModel.totalAmount)
                         .keyboardType(.decimalPad)
-                    TextField("Currency", text: $viewModel.currency)
+                    TextField(LocalizableKeys.Capture.currency, text: $viewModel.currency)
                 }
+                .scrollDisabled(true)
+                .scrollContentBackground(.hidden)
+                
+                Button(LocalizableKeys.Capture.saveReceipt) {
+                    Task {
+                        await viewModel.saveReceipt()
+                    }
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.blue)
+                .padding()
             }
-            .navigationTitle("Snap")
+            .navigationTitle(LocalizableKeys.Capture.snap)
             .navigationBarTitleDisplayMode(.inline)
             .sheet(isPresented: $showImagePicker) {
                 ImagePicker(image: $inputImage)
@@ -49,6 +60,13 @@ struct ReceiptCaptureView: View {
                             viewModel.receiptImage = inputImage
                         }
                     }
+            }
+            .alert(item: $viewModel.currentError) { errorItem in
+                Alert(
+                    title: Text(LocalizableKeys.Capture.errorTitle),
+                    message: Text(errorItem.text),
+                    dismissButton: .default(Text(LocalizableKeys.Capture.ok))
+                )
             }
         }
     }

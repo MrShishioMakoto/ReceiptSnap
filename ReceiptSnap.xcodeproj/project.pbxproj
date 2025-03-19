@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F441C9032D8B0D6500A575BF /* ReceiptError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441C9022D8B0D6500A575BF /* ReceiptError.swift */; };
+		F441C9092D8B118400A575BF /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441C9072D8B118400A575BF /* ErrorMessage.swift */; };
+		F441C9152D8B13DC00A575BF /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441C9132D8B13DC00A575BF /* String+Ext.swift */; };
+		F441C9192D8B13DE00A575BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F441C9172D8B13DE00A575BF /* Localizable.strings */; };
+		F441C91B2D8B14C400A575BF /* LocalizableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441C91A2D8B14C400A575BF /* LocalizableKeys.swift */; };
 		F49204132D8AD7E10064B300 /* ReceiptSnapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49204112D8AD7E10064B300 /* ReceiptSnapApp.swift */; };
 		F49204242D8AD8C60064B300 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492041B2D8AD8C60064B300 /* Receipt.swift */; };
 		F49204252D8AD8C60064B300 /* ReceiptCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492041D2D8AD8C60064B300 /* ReceiptCaptureView.swift */; };
@@ -39,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F441C9022D8B0D6500A575BF /* ReceiptError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptError.swift; sourceTree = "<group>"; };
+		F441C9072D8B118400A575BF /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		F441C9132D8B13DC00A575BF /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		F441C9162D8B13DE00A575BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F441C91A2D8B14C400A575BF /* LocalizableKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableKeys.swift; sourceTree = "<group>"; };
 		F49204112D8AD7E10064B300 /* ReceiptSnapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptSnapApp.swift; sourceTree = "<group>"; };
 		F492041B2D8AD8C60064B300 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		F492041D2D8AD8C60064B300 /* ReceiptCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCaptureView.swift; sourceTree = "<group>"; };
@@ -94,6 +104,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F441C9082D8B118400A575BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F441C9072D8B118400A575BF /* ErrorMessage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F441C9142D8B13DC00A575BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F441C9132D8B13DC00A575BF /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F441C9182D8B13DE00A575BF /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				F441C9172D8B13DE00A575BF /* Localizable.strings */,
+				F441C91A2D8B14C400A575BF /* LocalizableKeys.swift */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
 		F49204102D8AD7E10064B300 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				F492041B2D8AD8C60064B300 /* Receipt.swift */,
+				F441C9022D8B0D6500A575BF /* ReceiptError.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -174,6 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				F49204372D8ADCF50064B300 /* UIComponents */,
+				F441C9082D8B118400A575BF /* Models */,
+				F441C9182D8B13DE00A575BF /* Localizables */,
+				F441C9142D8B13DC00A575BF /* Extensions */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -350,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4EAC9782D89F8F80094CB7C /* Preview Assets.xcassets in Resources */,
+				F441C9192D8B13DE00A575BF /* Localizable.strings in Resources */,
 				F4EAC9792D89F8F80094CB7C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,13 +417,17 @@
 			files = (
 				F49204132D8AD7E10064B300 /* ReceiptSnapApp.swift in Sources */,
 				F49204242D8AD8C60064B300 /* Receipt.swift in Sources */,
+				F441C9092D8B118400A575BF /* ErrorMessage.swift in Sources */,
 				F49204252D8AD8C60064B300 /* ReceiptCaptureView.swift in Sources */,
 				F49204392D8ADCF50064B300 /* ImagePicker.swift in Sources */,
+				F441C91B2D8B14C400A575BF /* LocalizableKeys.swift in Sources */,
 				F49204262D8AD8C60064B300 /* ReceiptCaptureViewModel.swift in Sources */,
+				F441C9152D8B13DC00A575BF /* String+Ext.swift in Sources */,
 				F49204272D8AD8C60064B300 /* ReceiptCoordinator.swift in Sources */,
 				F49204312D8AD9680064B300 /* AppCoordinator.swift in Sources */,
 				F492042F2D8AD91C0064B300 /* ReceiptRepository.swift in Sources */,
 				F492042B2D8AD9010064B300 /* ReceiptRealmObject.swift in Sources */,
+				F441C9032D8B0D6500A575BF /* ReceiptError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +459,17 @@
 			targetProxy = F4EAC9592D89F8CB0094CB7C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F441C9172D8B13DE00A575BF /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F441C9162D8B13DE00A575BF /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F4EAC9602D89F8CB0094CB7C /* Debug */ = {
@@ -541,6 +596,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ReceiptSnap/Preview Content\"";
@@ -557,8 +613,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = goncalo.almeida88.gmail.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.goncaloalmeida.ReceiptSnap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -570,6 +627,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ReceiptSnap/Preview Content\"";
@@ -586,8 +644,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = goncalo.almeida88.gmail.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.goncaloalmeida.ReceiptSnap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
