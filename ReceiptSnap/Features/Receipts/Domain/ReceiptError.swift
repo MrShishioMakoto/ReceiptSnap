@@ -16,13 +16,13 @@ enum ReceiptError: Error {
     var localizedDescription: String {
         switch self {
         case .noImage:
-            return LocalizableKeys.Capture.noImage
+            return LocalizableKeys.ReceiptError.noImage
         case .invalidImageData:
-            return LocalizableKeys.Capture.invalidImageData
+            return LocalizableKeys.ReceiptError.invalidImageData
         case .invalidAmount:
-            return LocalizableKeys.Capture.invalidAmount
+            return LocalizableKeys.ReceiptError.invalidAmount
         case .storageError(let message):
-            return String.localizedStringWithFormat(LocalizableKeys.Capture.storageError, message)
+            return String.localizedStringWithFormat(LocalizableKeys.ReceiptError.storageError, message)
         }
     }
 }

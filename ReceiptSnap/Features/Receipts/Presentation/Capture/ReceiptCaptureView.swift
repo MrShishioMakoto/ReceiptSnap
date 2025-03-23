@@ -19,30 +19,37 @@ struct ReceiptCaptureView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Rectangle()
-                    .fill(Color.gray.opacity(0.3))
-                    .frame(width: 150, height: 300)
-                    .border(Color.black, width: 2)
-                    .overlay(
-                        Text(LocalizableKeys.Capture.tapToCapture)
-                            .font(.title)
-                            .fontWeight(.bold)
-                    )
-                    .onTapGesture {
-                        showImagePicker = true
-                    }
-                    .padding()
+                if let image = viewModel.receiptImage {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                } else {
+                    Rectangle()
+                        .fill(Color.gray.opacity(0.3))
+                        .frame(width: 200, height: 200)
+                        .border(Color.black, width: 2)
+                        .overlay(
+                            Text(LocalizableKeys.ReceiptCapture.tapToCapture)
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .padding()
+                        )
+                        .onTapGesture {
+                            showImagePicker = true
+                        }
+                }
                 
                 Form {
-                    DatePicker(LocalizableKeys.Capture.date, selection: $viewModel.date, displayedComponents: .date)
-                    TextField(LocalizableKeys.Capture.totalAmount, text: $viewModel.totalAmount)
+                    DatePicker(LocalizableKeys.Receipt.date, selection: $viewModel.date, displayedComponents: .date)
+                    TextField(LocalizableKeys.Receipt.totalAmount, text: $viewModel.totalAmount)
                         .keyboardType(.decimalPad)
-                    TextField(LocalizableKeys.Capture.currency, text: $viewModel.currency)
+                    TextField(LocalizableKeys.Receipt.currency, text: $viewModel.currency)
                 }
                 .scrollDisabled(true)
                 .scrollContentBackground(.hidden)
                 
-                Button(LocalizableKeys.Capture.saveReceipt) {
+                Button(LocalizableKeys.ReceiptCapture.saveReceipt) {
                     Task {
                         await viewModel.saveReceipt()
                     }
@@ -51,7 +58,7 @@ struct ReceiptCaptureView: View {
                 .tint(.blue)
                 .padding()
             }
-            .navigationTitle(LocalizableKeys.Capture.snap)
+            .navigationTitle(LocalizableKeys.ReceiptCapture.snap)
             .navigationBarTitleDisplayMode(.inline)
             .sheet(isPresented: $showImagePicker) {
                 ImagePicker(image: $inputImage)
@@ -63,9 +70,9 @@ struct ReceiptCaptureView: View {
             }
             .alert(item: $viewModel.currentError) { errorItem in
                 Alert(
-                    title: Text(LocalizableKeys.Capture.errorTitle),
+                    title: Text(LocalizableKeys.ReceiptError.errorTitle),
                     message: Text(errorItem.text),
-                    dismissButton: .default(Text(LocalizableKeys.Capture.ok))
+                    dismissButton: .default(Text(LocalizableKeys.ReceiptError.ok))
                 )
             }
         }

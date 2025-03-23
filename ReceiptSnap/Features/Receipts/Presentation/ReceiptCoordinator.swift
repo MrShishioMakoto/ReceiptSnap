@@ -14,8 +14,14 @@ class ReceiptCoordinator {
         TabView {
             ReceiptCaptureView(repository: repository)
                 .tabItem {
-                    Image(systemName: LocalizableKeys.Capture.camera)
-                    Text(LocalizableKeys.Capture.capture)
+                    Image(systemName: LocalizableKeys.ReceiptCapture.camera)
+                    Text(LocalizableKeys.ReceiptCapture.capture)
+                }
+            
+            ReceiptListView(repository: repository)
+                .tabItem {
+                    Image(systemName: LocalizableKeys.ReceiptList.listBullet)
+                    Text(LocalizableKeys.ReceiptList.receipts)
                 }
         }
         .tint(.black)

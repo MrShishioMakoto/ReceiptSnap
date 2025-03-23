@@ -12,6 +12,11 @@
 		F441C9152D8B13DC00A575BF /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441C9132D8B13DC00A575BF /* String+Ext.swift */; };
 		F441C9192D8B13DE00A575BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F441C9172D8B13DE00A575BF /* Localizable.strings */; };
 		F441C91B2D8B14C400A575BF /* LocalizableKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441C91A2D8B14C400A575BF /* LocalizableKeys.swift */; };
+		F441C9272D8B2FB500A575BF /* ReceiptListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441C9252D8B2FB500A575BF /* ReceiptListViewModel.swift */; };
+		F441C9292D8B309400A575BF /* ReceiptListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441C9282D8B309400A575BF /* ReceiptListView.swift */; };
+		F441C92B2D8B34E000A575BF /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441C92A2D8B34E000A575BF /* DateFormatter+Ext.swift */; };
+		F47220D02D8C7552003E96E3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F47220CF2D8C7552003E96E3 /* RealmSwift */; };
+		F47220D82D8C75AB003E96E3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F47220D72D8C75AB003E96E3 /* RealmSwift */; };
 		F49204132D8AD7E10064B300 /* ReceiptSnapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49204112D8AD7E10064B300 /* ReceiptSnapApp.swift */; };
 		F49204242D8AD8C60064B300 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492041B2D8AD8C60064B300 /* Receipt.swift */; };
 		F49204252D8AD8C60064B300 /* ReceiptCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492041D2D8AD8C60064B300 /* ReceiptCaptureView.swift */; };
@@ -21,9 +26,11 @@
 		F492042F2D8AD91C0064B300 /* ReceiptRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F492042D2D8AD91C0064B300 /* ReceiptRepository.swift */; };
 		F49204312D8AD9680064B300 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49204302D8AD9680064B300 /* AppCoordinator.swift */; };
 		F49204392D8ADCF50064B300 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49204362D8ADCF50064B300 /* ImagePicker.swift */; };
+		F49B99B22D8C591300CC044F /* ReceiptRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B99AB2D8C591300CC044F /* ReceiptRepositoryTests.swift */; };
+		F49B99B32D8C591300CC044F /* MockReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B99AE2D8C591300CC044F /* MockReceipt.swift */; };
+		F49B99B42D8C591300CC044F /* MockReceiptRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B99AF2D8C591300CC044F /* MockReceiptRepository.swift */; };
 		F4EAC9782D89F8F80094CB7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4EAC9712D89F8F80094CB7C /* Preview Assets.xcassets */; };
 		F4EAC9792D89F8F80094CB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4EAC9742D89F8F80094CB7C /* Assets.xcassets */; };
-		F4EAC9932D8A21FC0094CB7C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F4EAC9922D8A21FC0094CB7C /* RealmSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +50,48 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F4DEFCC42D8C62E80099B753 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4DEFCCE2D8C65200099B753 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4DEFCD02D8C65260099B753 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F441C9022D8B0D6500A575BF /* ReceiptError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptError.swift; sourceTree = "<group>"; };
 		F441C9072D8B118400A575BF /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		F441C9132D8B13DC00A575BF /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		F441C9162D8B13DE00A575BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F441C91A2D8B14C400A575BF /* LocalizableKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableKeys.swift; sourceTree = "<group>"; };
+		F441C9252D8B2FB500A575BF /* ReceiptListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListViewModel.swift; sourceTree = "<group>"; };
+		F441C9282D8B309400A575BF /* ReceiptListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptListView.swift; sourceTree = "<group>"; };
+		F441C92A2D8B34E000A575BF /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
 		F49204112D8AD7E10064B300 /* ReceiptSnapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptSnapApp.swift; sourceTree = "<group>"; };
 		F492041B2D8AD8C60064B300 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		F492041D2D8AD8C60064B300 /* ReceiptCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptCaptureView.swift; sourceTree = "<group>"; };
@@ -58,6 +101,9 @@
 		F492042D2D8AD91C0064B300 /* ReceiptRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptRepository.swift; sourceTree = "<group>"; };
 		F49204302D8AD9680064B300 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F49204362D8ADCF50064B300 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		F49B99AB2D8C591300CC044F /* ReceiptRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptRepositoryTests.swift; sourceTree = "<group>"; };
+		F49B99AE2D8C591300CC044F /* MockReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReceipt.swift; sourceTree = "<group>"; };
+		F49B99AF2D8C591300CC044F /* MockReceiptRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReceiptRepository.swift; sourceTree = "<group>"; };
 		F4EAC93E2D89F8C90094CB7C /* ReceiptSnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReceiptSnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EAC94E2D89F8CB0094CB7C /* ReceiptSnapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptSnapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4EAC9582D89F8CB0094CB7C /* ReceiptSnapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReceiptSnapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,9 +112,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F4EAC9512D89F8CB0094CB7C /* ReceiptSnapTests */ = {
+		F49B99C52D8C5B2900CC044F /* Capture */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ReceiptSnapTests;
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		F49B99C62D8C5B2F00CC044F /* List */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = List;
 			sourceTree = "<group>";
 		};
 		F4EAC95B2D89F8CB0094CB7C /* ReceiptSnapUITests */ = {
@@ -83,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4EAC9932D8A21FC0094CB7C /* RealmSwift in Frameworks */,
+				F47220D82D8C75AB003E96E3 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47220D02D8C7552003E96E3 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				F441C9132D8B13DC00A575BF /* String+Ext.swift */,
+				F441C92A2D8B34E000A575BF /* DateFormatter+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -127,6 +180,15 @@
 				F441C91A2D8B14C400A575BF /* LocalizableKeys.swift */,
 			);
 			path = Localizables;
+			sourceTree = "<group>";
+		};
+		F441C9262D8B2FB500A575BF /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F441C9282D8B309400A575BF /* ReceiptListView.swift */,
+				F441C9252D8B2FB500A575BF /* ReceiptListViewModel.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		F49204102D8AD7E10064B300 /* Features */ = {
@@ -167,7 +229,9 @@
 		F49204212D8AD8C60064B300 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F49204222D8AD8C60064B300 /* ReceiptCoordinator.swift */,
 				F492041F2D8AD8C60064B300 /* Capture */,
+				F441C9262D8B2FB500A575BF /* List */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -177,7 +241,6 @@
 			children = (
 				F492041C2D8AD8C60064B300 /* Domain */,
 				F49204212D8AD8C60064B300 /* Presentation */,
-				F49204222D8AD8C60064B300 /* ReceiptCoordinator.swift */,
 			);
 			path = Receipts;
 			sourceTree = "<group>";
@@ -217,12 +280,72 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		F49B99AC2D8C591300CC044F /* DataLayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F49B99AB2D8C591300CC044F /* ReceiptRepositoryTests.swift */,
+			);
+			path = DataLayerTests;
+			sourceTree = "<group>";
+		};
+		F49B99B02D8C591300CC044F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F49B99AE2D8C591300CC044F /* MockReceipt.swift */,
+				F49B99AF2D8C591300CC044F /* MockReceiptRepository.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		F49B99B12D8C591300CC044F /* ReceiptSnapTests */ = {
+			isa = PBXGroup;
+			children = (
+				F49B99B02D8C591300CC044F /* Mocks */,
+				F49B99B82D8C594400CC044F /* FeatureTests */,
+				F49B99AC2D8C591300CC044F /* DataLayerTests */,
+			);
+			path = ReceiptSnapTests;
+			sourceTree = "<group>";
+		};
+		F49B99B82D8C594400CC044F /* FeatureTests */ = {
+			isa = PBXGroup;
+			children = (
+				F49B99C02D8C597D00CC044F /* ReceiptsTests */,
+			);
+			path = FeatureTests;
+			sourceTree = "<group>";
+		};
+		F49B99BF2D8C597D00CC044F /* PresentationTests */ = {
+			isa = PBXGroup;
+			children = (
+				F49B99C52D8C5B2900CC044F /* Capture */,
+				F49B99C62D8C5B2F00CC044F /* List */,
+			);
+			path = PresentationTests;
+			sourceTree = "<group>";
+		};
+		F49B99C02D8C597D00CC044F /* ReceiptsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F49B99BF2D8C597D00CC044F /* PresentationTests */,
+			);
+			path = ReceiptsTests;
+			sourceTree = "<group>";
+		};
+		F4DEFCCA2D8C65200099B753 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4EAC9352D89F8C90094CB7C = {
 			isa = PBXGroup;
 			children = (
 				F4EAC9772D89F8F80094CB7C /* ReceiptSnap */,
-				F4EAC9512D89F8CB0094CB7C /* ReceiptSnapTests */,
+				F49B99B12D8C591300CC044F /* ReceiptSnapTests */,
 				F4EAC95B2D89F8CB0094CB7C /* ReceiptSnapUITests */,
+				F4DEFCCA2D8C65200099B753 /* Frameworks */,
 				F4EAC93F2D89F8C90094CB7C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -248,8 +371,8 @@
 		F4EAC9732D89F8F80094CB7C /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				F492042A2D8AD9010064B300 /* RealmObjects */,
 				F492042E2D8AD91C0064B300 /* Repositories */,
+				F492042A2D8AD9010064B300 /* RealmObjects */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -277,6 +400,7 @@
 				F4EAC93A2D89F8C90094CB7C /* Sources */,
 				F4EAC93B2D89F8C90094CB7C /* Frameworks */,
 				F4EAC93C2D89F8C90094CB7C /* Resources */,
+				F4DEFCC42D8C62E80099B753 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,7 +408,7 @@
 			);
 			name = ReceiptSnap;
 			packageProductDependencies = (
-				F4EAC9922D8A21FC0094CB7C /* RealmSwift */,
+				F47220D72D8C75AB003E96E3 /* RealmSwift */,
 			);
 			productName = ReceiptSnap;
 			productReference = F4EAC93E2D89F8C90094CB7C /* ReceiptSnap.app */;
@@ -297,6 +421,7 @@
 				F4EAC94A2D89F8CB0094CB7C /* Sources */,
 				F4EAC94B2D89F8CB0094CB7C /* Frameworks */,
 				F4EAC94C2D89F8CB0094CB7C /* Resources */,
+				F4DEFCD02D8C65260099B753 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,10 +429,12 @@
 				F4EAC9502D89F8CB0094CB7C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				F4EAC9512D89F8CB0094CB7C /* ReceiptSnapTests */,
+				F49B99C52D8C5B2900CC044F /* Capture */,
+				F49B99C62D8C5B2F00CC044F /* List */,
 			);
 			name = ReceiptSnapTests;
 			packageProductDependencies = (
+				F47220CF2D8C7552003E96E3 /* RealmSwift */,
 			);
 			productName = ReceiptSnapTests;
 			productReference = F4EAC94E2D89F8CB0094CB7C /* ReceiptSnapTests.xctest */;
@@ -320,6 +447,7 @@
 				F4EAC9542D89F8CB0094CB7C /* Sources */,
 				F4EAC9552D89F8CB0094CB7C /* Frameworks */,
 				F4EAC9562D89F8CB0094CB7C /* Resources */,
+				F4DEFCCE2D8C65200099B753 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -369,7 +497,7 @@
 			mainGroup = F4EAC9352D89F8C90094CB7C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				F4EAC9912D8A21FC0094CB7C /* XCRemoteSwiftPackageReference "realm-swift" */,
+				F47220CE2D8C7552003E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F4EAC93F2D89F8C90094CB7C /* Products */;
@@ -415,12 +543,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F441C92B2D8B34E000A575BF /* DateFormatter+Ext.swift in Sources */,
 				F49204132D8AD7E10064B300 /* ReceiptSnapApp.swift in Sources */,
 				F49204242D8AD8C60064B300 /* Receipt.swift in Sources */,
 				F441C9092D8B118400A575BF /* ErrorMessage.swift in Sources */,
 				F49204252D8AD8C60064B300 /* ReceiptCaptureView.swift in Sources */,
 				F49204392D8ADCF50064B300 /* ImagePicker.swift in Sources */,
+				F441C9272D8B2FB500A575BF /* ReceiptListViewModel.swift in Sources */,
 				F441C91B2D8B14C400A575BF /* LocalizableKeys.swift in Sources */,
+				F441C9292D8B309400A575BF /* ReceiptListView.swift in Sources */,
 				F49204262D8AD8C60064B300 /* ReceiptCaptureViewModel.swift in Sources */,
 				F441C9152D8B13DC00A575BF /* String+Ext.swift in Sources */,
 				F49204272D8AD8C60064B300 /* ReceiptCoordinator.swift in Sources */,
@@ -435,6 +566,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F49B99B22D8C591300CC044F /* ReceiptRepositoryTests.swift in Sources */,
+				F49B99B32D8C591300CC044F /* MockReceipt.swift in Sources */,
+				F49B99B42D8C591300CC044F /* MockReceiptRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,7 +901,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F4EAC9912D8A21FC0094CB7C /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		F47220CE2D8C7552003E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -778,9 +912,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F4EAC9922D8A21FC0094CB7C /* RealmSwift */ = {
+		F47220CF2D8C7552003E96E3 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F4EAC9912D8A21FC0094CB7C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = F47220CE2D8C7552003E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		F47220D72D8C75AB003E96E3 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F47220CE2D8C7552003E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

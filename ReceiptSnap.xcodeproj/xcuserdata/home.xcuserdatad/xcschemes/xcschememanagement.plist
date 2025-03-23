@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ReceiptSnap.xcscheme_^#shared#^_</key>
+		<key>GettingStarted (Playground).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>ReceiptSnap.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>ReceiptSnapTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F4EAC93D2D89F8C90094CB7C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4EAC94D2D89F8CB0094CB7C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4EAC9572D89F8CB0094CB7C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -6,21 +6,27 @@
   
 */
 
-/* Receipt Capture Prompts */
-"receipt_capture_tap_to_capture" = "Tap to capture a photo of your receipt.";
+// Mark: - Receipt
+"receipt_capture_date" = "Date";
+"receipt_capture_total_amount" = "Total Amount";
+"receipt_capture_currency" = "Currency";
+
+// Mark: - ReceiptError
+"receipt_capture_error_title" = "Error";
+"receipt_capture_ok" = "OK";
 "receipt_capture_no_image" = "Please capture or select an image.";
 "receipt_capture_invalid_image_data" = "Failed to convert image to JPEG data.";
 "receipt_capture_invalid_amount" = "Please enter a valid amount.";
 "receipt_capture_storage_error" = "Error saving receipt: %@";
 
-/* UI Labels */
-"receipt_capture_date" = "Date";
-"receipt_capture_total_amount" = "Total Amount";
-"receipt_capture_currency" = "Currency";
+// Mark: - ReceiptCapture
+"receipt_capture_tap_to_capture" = "Tap to capture a photo of your receipt.";
 "receipt_capture_snap" = "Snap";
 "receipt_capture_save_receipt" = "Save receipt";
-"receipt_capture_error_title" = "Error";
-"receipt_capture_ok" = "OK";
 "receipt_capture_capture" = "Capture";
 "receipt_capture_camera" = "camera";
+
+// Mark: - ReceiptList
+"receipt_list_list_bullet" = "list.bullet";
+"receipt_list_receipts" = "Receipts";
 
